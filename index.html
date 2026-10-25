@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect Four BD</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <div>
+      <h1 id="title">Connect Four BD</h1>
+      <p id="subtitle" class="sub">Drop four in a row — beat the AI or a friend.</p>
+    </div>
+    <button id="langBtn" class="lang-btn" type="button">বাংলা</button>
+  </header>
+
+  <section class="controls" aria-label="Game settings">
+    <div class="row">
+      <span id="modeLabel" class="lbl">Mode</span>
+      <div class="seg" role="group">
+        <button id="modeAI" class="seg-btn active" type="button">Play vs AI</button>
+        <button id="mode2p" class="seg-btn" type="button">2 Players</button>
+      </div>
+    </div>
+    <div class="row" id="diffRow">
+      <span id="diffLabel" class="lbl">Difficulty</span>
+      <div class="seg" role="group">
+        <button id="diffEasy" class="seg-btn" type="button">Easy</button>
+        <button id="diffMed" class="seg-btn active" type="button">Medium</button>
+        <button id="diffHard" class="seg-btn" type="button">Hard</button>
+      </div>
+    </div>
+    <div class="row" id="startsRow">
+      <span id="startsLabel" class="lbl">Starts</span>
+      <div class="seg" role="group">
+        <button id="startsYou" class="seg-btn active" type="button">You start</button>
+        <button id="startsAI" class="seg-btn" type="button">AI starts</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="scorebar" aria-label="Score">
+    <span id="scoreLabel" class="lbl">Score</span>
+    <div class="scores">
+      <span><span id="labelA">You</span>: <strong id="scoreA">0</strong></span>
+      <span><span id="labelD">Draws</span>: <strong id="scoreD">0</strong></span>
+      <span><span id="labelB">AI</span>: <strong id="scoreB">0</strong></span>
+    </div>
+    <span id="moves" class="moves">Moves: 0</span>
+  </section>
+
+  <section class="statusbar">
+    <span id="turnDisc" class="turn-disc p1" aria-hidden="true"></span>
+    <strong id="status">Your turn</strong>
+    <span class="spacer"></span>
+    <button id="undoBtn" class="btn" type="button">Undo</button>
+    <button id="newBtn" class="btn primary" type="button">New Game</button>
+  </section>
+
+  <section class="board-wrap">
+    <div id="board" class="board" role="grid" aria-label="Connect Four board"></div>
+    <p id="hint" class="hint">Tap a column to drop your disc.</p>
+  </section>
+
+  <section class="how">
+    <h2 id="howToTitle">How to play</h2>
+    <p id="howText">Players take turns dropping discs into a column. The first to line up four discs — horizontally, vertically, or diagonally — wins. Fill the board with no winner and it is a draw.</p>
+  </section>
+
+  <footer id="footer" class="footer">Offline personal game. No data leaves your device. Scores are kept only in this browser.</footer>
+</main>
+<script src="game.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
